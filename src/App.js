@@ -1,40 +1,29 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Login from "./Components/Login/Login";
+import Register from "./Components/Register/Register";
+import Profile from "./Components/Profile/Profile";
+import ChangePassword from "./Components/ChangePassword/ChangePassword";
+import Main from "./Layouts/Main/Main";
+import Checkpoints from "./Components/Checkpoints/Checkpoints";
+import CheckpointDetail from "./Components/Checkpoints/CheckpointDetail";
+import History from "./Components/History/History";
 
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-
+import HistoryDetail from "./Components/History/HistoryDetail";
+import User from "./Components/Users/Users";
 function App() {
   return (
-    <>
-      <div className="container">
-        <div className="row">
-          <div className="col-4"></div>
-          <div className="col-4">
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Form>
-          </div>
-          <div className="col-4"></div>
-        </div>
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Main />}></Route>
+      <Route path="/login" element={<Login />}></Route>
+      <Route path="/register" element={<Register />}></Route>
+      <Route path="/profile" element={<Profile />}></Route>
+      <Route path="/users" element={<User />}></Route>
+      <Route path="/changepassword" element={<ChangePassword />}></Route>
+      <Route path="/checkpoints" element={<Checkpoints />}></Route>
+      <Route path="/historys" element={<History />}></Route>
+      <Route path="/historys/:id" element={<HistoryDetail />}></Route>
+    </Routes>
   );
 }
 
