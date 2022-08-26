@@ -5,7 +5,6 @@ import Header from "../../Common/Header/Header";
 function Profile() {
   return (
     <>
-      <Header></Header>
       <div className="container" style={{ paddingTop: "50px" }}>
         <div className="row">
           <div className="col"></div>

@@ -3,7 +3,6 @@ import Header from "../../Common/Header/Header";
 function History() {
   return (
     <>
-      <Header></Header>
       <div className="container">
         <div style={{ textAlign: "center", padding: "30px" }}>
           <h1>History checkpoints</h1>
