@@ -3,7 +3,6 @@ import Header from "../../Common/Header/Header";
 function Checkpoints() {
   return (
     <>
-      <Header></Header>
       <div className="container">
         <div style={{ textAlign: "center", padding: "30px" }}>
           <h1>List checkpoints need to be checked</h1>

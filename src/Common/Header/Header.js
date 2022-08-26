@@ -12,17 +12,27 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/checkpoints">Checkpoints</Nav.Link>
-            <Nav.Link href="/historys">History checks</Nav.Link>
+            <Nav.Link href="/api/checkpoints">Checkpoints</Nav.Link>
+            <Nav.Link href="/api/historys">History checks</Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown title="Account" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-              <NavDropdown.Item href="/changepassword">
+              <NavDropdown.Item href="/api/profile">Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/api/changepassword">
                 Change password
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+              <NavDropdown.Item href="/api/invite">
+                Invite user
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/api/users">
+                Manage users
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/api/createcheckpoint">
+                Create checkpoint
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/api/login">Logout</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
