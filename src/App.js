@@ -1,39 +1,43 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Login from "./Components/Login/Login";
+import Register from "./Components/Register/Register";
+import Profile from "./Components/Profile/Profile";
+import ChangePassword from "./Components/ChangePassword/ChangePassword";
+import Checkpoints from "./Components/Checkpoints/Checkpoints";
+import CheckpointDetail from "./Components/Checkpoints/PerformCheckpoint";
+import CreateCheckpoint from "./Components/Checkpoints/CreateCheckpoint";
+import History from "./Components/History/History";
 
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-
+import HistoryDetail from "./Components/History/HistoryDetail";
+import User from "./Components/Users/Users";
+import Invite from "./Components/Invite/Invite";
+import Header from "./Common/Header/Header";
 function App() {
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="col-4"></div>
-          <div className="col-4">
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Form>
-          </div>
-          <div className="col-4"></div>
-        </div>
+      <div>
+        <Header></Header>
       </div>
+      <Routes>
+        <Route path="/api/login" element={<Login />}></Route>
+        <Route path="/api/register" element={<Register />}></Route>
+        <Route path="/api/profile" element={<Profile />}></Route>
+        <Route path="/api/invite" element={<Invite />}></Route>
+        <Route path="/api/users" element={<User />}></Route>
+        <Route path="/api/changepassword" element={<ChangePassword />}></Route>
+        <Route path="/api/checkpoints" element={<Checkpoints />}></Route>
+        <Route
+          path="/api/checkpoints/:id"
+          element={<CheckpointDetail />}
+        ></Route>
+        <Route
+          path="/api/createcheckpoint"
+          element={<CreateCheckpoint />}
+        ></Route>
+        <Route path="/api/historys" element={<History />}></Route>
+        <Route path="/api/historys/:id" element={<HistoryDetail />}></Route>
+      </Routes>
     </>
   );
 }
