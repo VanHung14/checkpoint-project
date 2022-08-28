@@ -5,7 +5,7 @@ import Register from "./Components/Register/Register";
 import Profile from "./Components/Profile/Profile";
 import ChangePassword from "./Components/ChangePassword/ChangePassword";
 import Checkpoints from "./Components/Checkpoints/Checkpoints";
-import CheckpointDetail from "./Components/Checkpoints/PerformCheckpoint";
+import PerformCheckpoint from "./Components/Checkpoints/PerformCheckpoint";
 import CreateCheckpoint from "./Components/Checkpoints/CreateCheckpoint";
 import History from "./Components/History/History";
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/api/checkpoints" element={<Checkpoints />}></Route>
         <Route
           path="/api/checkpoints/:id"
-          element={<CheckpointDetail />}
+          element={<PerformCheckpoint />}
         ></Route>
         <Route
           path="/api/createcheckpoint"
